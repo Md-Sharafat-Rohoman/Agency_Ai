@@ -7,36 +7,38 @@ export default function Navbar({ theme, setTheme }) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
-        <motion.div 
-        initial={{opacity:0, y:-50}}
-        animate={{opacity:1, y:0}}
-        transition={{duration:0.6, ease:'easeOut'}}
-        className='flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40 py-4 sticky top-0 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70'>
+        <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className='flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40 py-4 sticky top-0 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70'>
 
             {/* Logo */}
             <img src={theme === "dark" ? assets.logo_dark : assets.logo} alt="Logo" className='w-32 sm:w-40' />
 
             {/* Navigation Menu / Sidebar */}
             <div className={`
-                flex gap-5 transition-all duration-300
-                /* Desktop Styles */
-                sm:static sm:flex-row sm:items-center sm:bg-transparent sm:text-gray-700 dark:sm:text-white
-                /* Mobile Styles (Sidebar) */
-                max-sm:fixed max-sm:top-0 max-sm:bottom-0 max-sm:min-h-screen max-sm:w-64 max-sm:bg-primary max-sm:text-white max-sm:flex-col max-sm:pt-20 max-sm:pl-10 max-sm:z-50
-                ${sidebarOpen ? 'max-sm:right-0' : 'max-sm:-right-64'}
-            `}>
+                 flex gap-5 transition-all duration-300
+                 /* Desktop Styles */
+                 sm:static sm:flex-row sm:items-center sm:bg-transparent sm:text-gray-700 dark:sm:text-white
+                 /* Mobile Styles (Sidebar) */
+                 max-sm:fixed max-sm:top-0 max-sm:bottom-0 max-sm:min-h-screen max-sm:w-64 
+                 max-sm:bg-white dark:max-sm:bg-gray-800 max-sm:text-gray-700 dark:max-sm:text-white 
+                 max-sm:flex-col max-sm:pt-20 max-sm:pl-10 max-sm:z-50 shadow-2xl
+                 ${sidebarOpen ? 'max-sm:right-0' : 'max-sm:-right-64'}
+               `}>
                 {/* Close Icon for Mobile */}
                 <img
-                    src={assets.close_icon}
+                    src={theme === 'dark' ? assets.close_icon : assets.close_icon}
                     alt="Close"
                     className='w-5 absolute right-4 top-4 sm:hidden cursor-pointer'
                     onClick={() => setSidebarOpen(false)}
                 />
 
-                <a href="#" className='sm:hover:border-b font-bold' onClick={() => setSidebarOpen(false)}>Home</a>
-                <a href="#services" className='sm:hover:border-b font-bold' onClick={() => setSidebarOpen(false)}>Services</a>
-                <a href="#our-work" className='sm:hover:border-b font-bold' onClick={() => setSidebarOpen(false)}>Our Work</a>
-                <a href="#contact-us" className='sm:hover:border-b font-bold' onClick={() => setSidebarOpen(false)}>Contact Us</a>
+                <a href="#" className='sm:hover:text-primary font-medium' onClick={() => setSidebarOpen(false)}>Home</a>
+                <a href="#services" className='sm:hover:text-primary font-medium' onClick={() => setSidebarOpen(false)}>Services</a>
+                <a href="#our-work" className='sm:hover:text-primary font-medium' onClick={() => setSidebarOpen(false)}>Our Work</a>
+                <a href="#contact-us" className='sm:hover:text-primary font-medium' onClick={() => setSidebarOpen(false)}>Contact Us</a>
             </div>
 
             <div className='flex items-center gap-2 sm:gap-4'>
