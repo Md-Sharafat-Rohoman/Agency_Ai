@@ -8,10 +8,8 @@
 
 @layer base {
   * {
-    /* Urbanist এখন ৩০০-৯০০ এর মধ্যে যেকোনোটা সাপোর্ট করবে */
     font-family: "Urbanist", sans-serif;
     font-weight: 400;
-    /* এখন এটা কাজ করবে */
     cursor: none;
     -webkit-font-smoothing: antialiased;
   }
@@ -22,7 +20,6 @@
   b,
   strong {
     font-weight: 600;
-    /* শুধু হেডলাইনগুলো একটু মোটা রাখলি */
   }
 }
 

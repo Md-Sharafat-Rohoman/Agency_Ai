@@ -1,7 +1,6 @@
 import React from 'react'
 import { company_logos } from '../assets/assets'
 import { motion } from "motion/react"
-// import { Visitor } from 'vite'
 
 
 export default function TrustedBy() {
@@ -20,7 +19,7 @@ export default function TrustedBy() {
                 viewport={{ once: true }}
                 className='font-semibold text-gray-600 dark:text-gray-300 mb-6'>
                 Trusted by Leading Companies
-            </motion.h3> {/* */}
+            </motion.h3>
 
             <motion.div
                 initial='hidden'
@@ -41,7 +40,7 @@ export default function TrustedBy() {
                         alt={`Company ${index}`}
                         className='max-h-5 sm:max-h-6 hover:scale-110 transition-all duration-300 dark:drop-shadow-xl'
                     />
-                ))} {/* */}
+                ))}
             </motion.div>
         </motion.div>
     )
