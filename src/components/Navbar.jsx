@@ -33,10 +33,10 @@ export default function Navbar({ theme, setTheme }) {
                     onClick={() => setSidebarOpen(false)}
                 />
 
-                <a href="#" className='sm:hover:border-b' onClick={() => setSidebarOpen(false)}>Home</a>
-                <a href="#services" className='sm:hover:border-b' onClick={() => setSidebarOpen(false)}>Services</a>
-                <a href="#our-work" className='sm:hover:border-b' onClick={() => setSidebarOpen(false)}>Our Work</a>
-                <a href="#contact-us" className='sm:hover:border-b' onClick={() => setSidebarOpen(false)}>Contact Us</a>
+                <a href="#" className='sm:hover:border-b font-bold' onClick={() => setSidebarOpen(false)}>Home</a>
+                <a href="#services" className='sm:hover:border-b font-bold' onClick={() => setSidebarOpen(false)}>Services</a>
+                <a href="#our-work" className='sm:hover:border-b font-bold' onClick={() => setSidebarOpen(false)}>Our Work</a>
+                <a href="#contact-us" className='sm:hover:border-b font-bold' onClick={() => setSidebarOpen(false)}>Contact Us</a>
             </div>
 
             <div className='flex items-center gap-2 sm:gap-4'>

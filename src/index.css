@@ -1,38 +1,30 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,900;1,900&display=swap');
-
-
-@import "tailwindcss";
-
-@custom-variant dark(&:where(.dark, .dark*)) * {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 500;
-}
-
-@theme {
-  --color-primary: #5044E5;
-}
- */
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:wght@100..900&family=Urbanist:wght@300..900&display=swap');
 
 @import "tailwindcss";
 
 @theme {
-  /* কাস্টম কালার ভেরিয়েবল */
   --color-primary: #5044E5;
 }
 
-/* গ্লোবাল ফন্ট সেটিংস */
 @layer base {
   * {
+    /* Urbanist এখন ৩০০-৯০০ এর মধ্যে যেকোনোটা সাপোর্ট করবে */
     font-family: "Urbanist", sans-serif;
     font-weight: 400;
+    /* এখন এটা কাজ করবে */
     cursor: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  b,
+  strong {
+    font-weight: 600;
+    /* শুধু হেডলাইনগুলো একটু মোটা রাখলি */
   }
 }
 
-/* Tailwind v4 এ ডার্ক মোড ডিফল্টভাবে 'media' (system preference) থাকে। 
-   যদি তুই ক্লাস দিয়ে (যেমন <html class="dark">) কন্ট্রোল করতে চাস, 
-   তবে নিচের লাইনটি ব্যবহার করবি:
-*/
+
 @variant dark (&:where(.dark, .dark *));
